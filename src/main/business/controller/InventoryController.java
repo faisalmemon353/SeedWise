@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 /**
- * GRASP Controller â€” InventoryController.
+ * GRASP Controller - InventoryController.
  * Handles all inventory-related use case events.
  * 
  * UC-04: recordDistribution()
@@ -69,7 +69,7 @@ public class InventoryController {
         // Subtract stock
         inventoryDAO.subtractStock(itemTypeId, quantity);
 
-        // GoF Observer â€” check if stock fell below threshold
+        // GoF Observer - check if stock fell below threshold
         InventoryStock updatedStock = inventoryDAO.findStockByItemTypeId(itemTypeId);
         if (updatedStock != null) {
             stockObserver.updateStock(updatedStock);

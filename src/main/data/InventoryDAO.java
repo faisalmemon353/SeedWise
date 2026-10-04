@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Data Access Object for InventoryStock and ItemType entities.
- * GRASP: Low Coupling â€” UI and BL never touch SQL directly.
+ * GRASP: Low Coupling - UI and BL never touch SQL directly.
  */
 public class InventoryDAO {
 

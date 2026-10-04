@@ -29,7 +29,7 @@ public class SubsidyRequest {
     public SubsidyRequest() {
     }
 
-    /** Submit the request â€” sets status to PENDING. */
+    /** Submit the request - sets status to PENDING. */
     public void submit() {
         this.status = "PENDING";
     }

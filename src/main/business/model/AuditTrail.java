@@ -18,7 +18,7 @@ public class AuditTrail {
     /** Default constructor. */
     public AuditTrail() {}
 
-    // â”€â”€â”€ Methods from class diagram â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Methods from class diagram ---
 
     /** Log an action. */
     public void log(String entityId, String action, String actorId, String role, String details) {
@@ -30,7 +30,7 @@ public class AuditTrail {
         this.timestamp = new Date();
     }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getAuditId() { return auditId; }
     public void setAuditId(String auditId) { this.auditId = auditId; }

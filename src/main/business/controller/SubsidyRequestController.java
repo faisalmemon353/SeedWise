@@ -9,7 +9,7 @@ import java.util.*;
 
 /**
  * GRASP Controller handles all subsidy-request use case events.
- * GRASP Information Expert â€” owns logic for UC-01, UC-02, UC-03, UC-10.
+ * GRASP Information Expert - owns logic for UC-01, UC-02, UC-03, UC-10.
  * 
  * UC-01: registerFarmer()
  * UC-02: submitRequest()
@@ -34,7 +34,7 @@ public class SubsidyRequestController {
 
     /**
      * Validates CNIC uniqueness and format, creates UserAccount + Farmer records.
-     * GRASP: Creator â€” Controller creates UserAccount and Farmer because it has
+     * GRASP: Creator - Controller creates UserAccount and Farmer because it has
      * initializing data.
      * 
      * @return new farmerId on success
@@ -77,7 +77,7 @@ public class SubsidyRequestController {
     /**
      * Validates seasonal rule, duplicate check, allocation limit, then persists
      * request.
-     * GRASP: Controller â€” coordinates multiple objects to fulfill the use case.
+     * GRASP: Controller - coordinates multiple objects to fulfill the use case.
      */
     public SubsidyRequest submitRequest(String farmerId, String cropId,
             int quantity, String season, String requestedItemId) throws SQLException {
@@ -172,7 +172,7 @@ public class SubsidyRequestController {
     /**
      * Checks: (1) account status Active, (2) CNIC validity, (3) seasonal window.
      * Result is persisted against the request record.
-     * GRASP: Controller â€” delegates to EligibilityService (Pure Fabrication).
+     * GRASP: Controller - delegates to EligibilityService (Pure Fabrication).
      */
     public EligibilityResult verifyEligibility(String requestId, String officerId) throws SQLException {
         SubsidyRequest request = requestDAO.findById(requestId);

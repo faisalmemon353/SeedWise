@@ -8,7 +8,7 @@ import java.util.UUID;
 
 /**
  * Data Access Object for Farmer entity.
- * GRASP: Low Coupling â€” UI and BL never touch SQL directly.
+ * GRASP: Low Coupling - UI and BL never touch SQL directly.
  */
 public class FarmerDAO {
 

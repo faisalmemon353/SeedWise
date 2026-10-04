@@ -25,7 +25,7 @@ public class DistributionEvent {
         this.timestamp = new Date();
     }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getDistId() { return distId; }
     public void setDistId(String distId) { this.distId = distId; }

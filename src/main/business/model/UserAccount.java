@@ -3,7 +3,7 @@ package business.model;
 /**
  * Domain model for user authentication.
  * Base class for Farmer, AgricultureOfficer, and Distributor.
- * OOP: Encapsulation â€” all fields private with controlled accessors.
+ * OOP: Encapsulation - all fields private with controlled accessors.
  */
 public class UserAccount {
     private String userId;        // UUID

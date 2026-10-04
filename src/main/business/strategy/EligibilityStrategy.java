@@ -6,8 +6,8 @@ import business.model.EligibilityResult;
 /**
  * GoF Strategy interface.
  * Allows switching eligibility-check algorithms at runtime without changing client code.
- * GRASP: Protected Variation â€” new rules can be added without modifying EligibilityService.
- * OOP: Abstraction â€” defines contract for eligibility checks.
+ * GRASP: Protected Variation - new rules can be added without modifying EligibilityService.
+ * OOP: Abstraction - defines contract for eligibility checks.
  */
 public interface EligibilityStrategy {
     /**

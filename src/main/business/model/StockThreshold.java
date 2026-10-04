@@ -24,7 +24,7 @@ public class StockThreshold {
         this.minQuantity = minQuantity;
     }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getThresholdId() { return thresholdId; }
     public void setThresholdId(String thresholdId) { this.thresholdId = thresholdId; }

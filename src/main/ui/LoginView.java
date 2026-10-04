@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import ui.components.CustomAlert;
 
 /**
- * Login View – first screen shown to users.
+ * Login View - first screen shown to users.
  * Routes to appropriate dashboard based on user role.
  */
 public class LoginView {
@@ -25,11 +25,11 @@ public class LoginView {
 
     public LoginView(Stage stage) {
 
-        // ═══ Shared background layer ══════════════════════════
+        // --- Shared background layer ---
         StackPane root = new StackPane();
         ui.components.ImageBackground.applyTo(root);
 
-        // ═══ Login card (glassmorphism) ═════════════════════════════
+        // --- Login card (glassmorphism) ---
         VBox card = new VBox(15);
         card.setAlignment(Pos.CENTER);
         card.setMaxWidth(420);
@@ -97,12 +97,12 @@ public class LoginView {
         card.getChildren().addAll(logo, subtitle, sep, userLabel, userField,
                                   passLabel, passField, loginBtn, registerLink);
 
-        // ═══ Center wrapper for the card ════════════════════════════
+        // --- Center wrapper for the card ---
         VBox centerWrapper = new VBox(card);
         centerWrapper.setAlignment(Pos.CENTER);
         root.getChildren().add(centerWrapper);
 
-        // ═══ Event handlers ═════════════════════════════════════════
+        // --- Event handlers ---
 
         loginBtn.setOnAction(e -> {
             String username = userField.getText().trim();

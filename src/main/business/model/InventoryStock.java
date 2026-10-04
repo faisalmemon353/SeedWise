@@ -7,8 +7,8 @@ import business.observer.StockObserver;
 
 /**
  * Domain model for InventoryStock entity.
- * GoF Observer Subject â€” notifies observers when stock changes.
- * GRASP: Information Expert â€” knows its own quantity and handles stock math.
+ * GoF Observer Subject - notifies observers when stock changes.
+ * GRASP: Information Expert - knows its own quantity and handles stock math.
  */
 public class InventoryStock {
     private String stockId;
@@ -21,14 +21,14 @@ public class InventoryStock {
     private String itemName;
     private String unit;
 
-    // â”€â”€â”€ Constructors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Constructors ---
 
     /** Default constructor. */
     public InventoryStock() {
         this.observers = new ArrayList<>();
     }
 
-    // â”€â”€â”€ GoF Observer methods â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- GoF Observer methods ---
 
     /** Register a new observer. */
     public void addObserver(StockObserver o) {
@@ -47,7 +47,7 @@ public class InventoryStock {
         }
     }
 
-    // â”€â”€â”€ Stock manipulation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Stock manipulation ---
 
     /** Add stock and notify observers. */
     public void addStock(int qty) {
@@ -63,7 +63,7 @@ public class InventoryStock {
         notifyObservers();
     }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getStockId() { return stockId; }
     public void setStockId(String stockId) { this.stockId = stockId; }

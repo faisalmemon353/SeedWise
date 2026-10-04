@@ -23,7 +23,7 @@ public class EligibilityResult {
         this.checkedAt = new Date();
     }
 
-    // â”€â”€â”€ Methods from class diagram â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Methods from class diagram ---
 
     /** Get the eligibility result. */
     public boolean getResult() { return result; }
@@ -34,7 +34,7 @@ public class EligibilityResult {
     /** Check if the farmer is eligible. */
     public boolean isEligible() { return result; }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getResultId() { return resultId; }
     public void setResultId(String resultId) { this.resultId = resultId; }

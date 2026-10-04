@@ -18,7 +18,7 @@ public class Report {
     /** Default constructor. */
     public Report() {}
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getReportId() { return reportId; }
     public void setReportId(String reportId) { this.reportId = reportId; }

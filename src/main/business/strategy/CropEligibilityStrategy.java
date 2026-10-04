@@ -7,9 +7,9 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * GoF Strategy â€” Concrete Strategy.
+ * GoF Strategy - Concrete Strategy.
  * Checks whether the farmer's requested crop is within its valid seasonal window.
- * OOP: Polymorphism â€” implements EligibilityStrategy interface.
+ * OOP: Polymorphism - implements EligibilityStrategy interface.
  */
 public class CropEligibilityStrategy implements EligibilityStrategy {
 

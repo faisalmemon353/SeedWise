@@ -277,7 +277,7 @@ public class DistributorDashboard {
 
             // --- Charts Section ---
 
-            // ==================== BAR CHART ====================
+            // --- BAR CHART ---
             Label barTitle = new Label("Stock vs Threshold");
             barTitle.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;");
 
@@ -364,7 +364,7 @@ public class DistributorDashboard {
             barCard.setPadding(new Insets(15));
             barCard.setStyle("-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 5);");
 
-            // ==================== PIE CHART ====================
+            // --- PIE CHART ---
             Label pieTitle = new Label("Inventory by Category");
             pieTitle.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;");
 

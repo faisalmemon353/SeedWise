@@ -15,7 +15,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
-        stage.setTitle("SeedWise â€” Agricultural Subsidy & Input Management System");
+        stage.setTitle("SeedWise - Agricultural Subsidy & Input Management System");
         stage.setMinWidth(1100);
         stage.setMinHeight(700);
         stage.setWidth(1200);

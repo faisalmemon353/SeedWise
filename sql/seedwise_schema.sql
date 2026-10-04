@@ -1,8 +1,8 @@
--- ═══════════════════════════════════════════════════════════════
--- SeedWise — Agricultural Subsidy and Input Management System
+-- ============================================================
+-- SeedWise - Agricultural Subsidy and Input Management System
 -- SQL Server Database Schema (T-SQL)
 -- Run in SSMS: Open this file and execute (F5)
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 
 -- Create database
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'seedwise')
@@ -12,7 +12,7 @@ GO
 USE seedwise;
 GO
 
--- ─── USER ACCOUNT ─────────────────────────────────────────────
+-- ==================== USER ACCOUNT ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'user_account')
 CREATE TABLE user_account (
     user_id       VARCHAR(36)  PRIMARY KEY,
@@ -22,7 +22,7 @@ CREATE TABLE user_account (
 );
 GO
 
--- ─── FARMER ────────────────────────────────────────────────────
+-- ==================== FARMER ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'farmer')
 CREATE TABLE farmer (
     farmer_id           VARCHAR(36) PRIMARY KEY,
@@ -37,7 +37,7 @@ CREATE TABLE farmer (
 );
 GO
 
--- ─── AGRICULTURE OFFICER ───────────────────────────────────────
+-- ==================== AGRICULTURE OFFICER ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'agriculture_officer')
 CREATE TABLE agriculture_officer (
     officer_id  VARCHAR(36) PRIMARY KEY,
@@ -47,7 +47,7 @@ CREATE TABLE agriculture_officer (
 );
 GO
 
--- ─── DISTRIBUTOR ───────────────────────────────────────────────
+-- ==================== DISTRIBUTOR ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'distributor')
 CREATE TABLE distributor (
     distributor_id VARCHAR(36) PRIMARY KEY,
@@ -58,7 +58,7 @@ CREATE TABLE distributor (
 );
 GO
 
--- ─── CROP ──────────────────────────────────────────────────────
+-- ==================== CROP ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'crop')
 CREATE TABLE crop (
     crop_id     VARCHAR(36) PRIMARY KEY,
@@ -67,7 +67,7 @@ CREATE TABLE crop (
 );
 GO
 
--- ─── SEASONAL RULE ─────────────────────────────────────────────
+-- ==================== SEASONAL RULE ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'seasonal_rule')
 CREATE TABLE seasonal_rule (
     rule_id     VARCHAR(36) PRIMARY KEY,
@@ -79,7 +79,7 @@ CREATE TABLE seasonal_rule (
 );
 GO
 
--- ─── ALLOCATION LIMIT ──────────────────────────────────────────
+-- ==================== ALLOCATION LIMIT ====================
 CREATE TABLE allocation_limit (
     limit_id     VARCHAR(36) PRIMARY KEY,
     item_type_id VARCHAR(36) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE allocation_limit (
 );
 GO
 
--- ─── SUBSIDY REQUEST ───────────────────────────────────────────
+-- ==================== SUBSIDY REQUEST ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'subsidy_request')
 CREATE TABLE subsidy_request (
     request_id       VARCHAR(36) PRIMARY KEY,
@@ -109,7 +109,7 @@ CREATE TABLE subsidy_request (
 );
 GO
 
--- ─── ELIGIBILITY RESULT ────────────────────────────────────────
+-- ==================== ELIGIBILITY RESULT ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'eligibility_result')
 CREATE TABLE eligibility_result (
     result_id   VARCHAR(36) PRIMARY KEY,
@@ -121,7 +121,7 @@ CREATE TABLE eligibility_result (
 );
 GO
 
--- ─── ITEM TYPE ─────────────────────────────────────────────────
+-- ==================== ITEM TYPE ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'item_type')
 CREATE TABLE item_type (
     item_type_id VARCHAR(36) PRIMARY KEY,
@@ -131,7 +131,7 @@ CREATE TABLE item_type (
 );
 GO
 
--- ─── INVENTORY STOCK ───────────────────────────────────────────
+-- ==================== INVENTORY STOCK ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'inventory_stock')
 CREATE TABLE inventory_stock (
     stock_id      VARCHAR(36) PRIMARY KEY,
@@ -142,7 +142,7 @@ CREATE TABLE inventory_stock (
 );
 GO
 
--- ─── STOCK THRESHOLD ───────────────────────────────────────────
+-- ==================== STOCK THRESHOLD ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'stock_threshold')
 CREATE TABLE stock_threshold (
     threshold_id  VARCHAR(36) PRIMARY KEY,
@@ -152,7 +152,7 @@ CREATE TABLE stock_threshold (
 );
 GO
 
--- ─── DISTRIBUTION EVENT ────────────────────────────────────────
+-- ==================== DISTRIBUTION EVENT ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'distribution_event')
 CREATE TABLE distribution_event (
     dist_id        VARCHAR(36) PRIMARY KEY,
@@ -165,7 +165,7 @@ CREATE TABLE distribution_event (
 );
 GO
 
--- ─── AUDIT TRAIL ───────────────────────────────────────────────
+-- ==================== AUDIT TRAIL ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'audit_trail')
 CREATE TABLE audit_trail (
     audit_id    VARCHAR(36) PRIMARY KEY,
@@ -178,7 +178,7 @@ CREATE TABLE audit_trail (
 );
 GO
 
--- ─── REPORT ────────────────────────────────────────────────────
+-- ==================== REPORT ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'report')
 CREATE TABLE report (
     report_id      VARCHAR(36) PRIMARY KEY,
@@ -190,7 +190,7 @@ CREATE TABLE report (
 );
 GO
 
--- ─── STOCK ALERT ───────────────────────────────────────────────
+-- ==================== STOCK ALERT ====================
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'stock_alert')
 CREATE TABLE stock_alert (
     alert_id      VARCHAR(36) PRIMARY KEY,
@@ -202,9 +202,9 @@ CREATE TABLE stock_alert (
 );
 GO
 
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 -- SEED DATA
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 
 -- Default officer account (password: admin123)
 IF NOT EXISTS (SELECT 1 FROM user_account WHERE user_id = 'u-officer-01')
@@ -221,9 +221,9 @@ IF NOT EXISTS (SELECT 1 FROM agriculture_officer WHERE officer_id = 'off-01')
 IF NOT EXISTS (SELECT 1 FROM distributor WHERE distributor_id = 'dist-01')
     INSERT INTO distributor VALUES ('dist-01', 'u-dist-01', 'Main Distributor', '03001234567');
 
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 -- CROPS (5 Rabi + 5 Kharif = 10 total)
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 
 -- RABI CROPS
 IF NOT EXISTS (SELECT 1 FROM crop WHERE crop_id = 'crop-wheat')
@@ -249,9 +249,9 @@ IF NOT EXISTS (SELECT 1 FROM crop WHERE crop_id = 'crop-sugarcane')
 IF NOT EXISTS (SELECT 1 FROM crop WHERE crop_id = 'crop-bajra')
     INSERT INTO crop VALUES ('crop-bajra','Bajra (Millet)','Kharif coarse grain');
 
--- ═══════════════════════════════════════════════════════════════
--- ITEM TYPES — Seeds (per crop), Fertilizers, Pesticides
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
+-- ITEM TYPES - Seeds (per crop), Fertilizers, Pesticides
+-- ============================================================
 
 -- SEEDS (one per crop)
 IF NOT EXISTS (SELECT 1 FROM item_type WHERE item_type_id = 'seed-wheat')
@@ -311,9 +311,9 @@ IF NOT EXISTS (SELECT 1 FROM item_type WHERE item_type_id = 'pest-curacron')
 IF NOT EXISTS (SELECT 1 FROM item_type WHERE item_type_id = 'pest-match')
     INSERT INTO item_type VALUES ('pest-match','Match','Litres','IGR insecticide for armyworm');
 
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 -- INVENTORY STOCK (one entry per item type)
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 
 -- Seeds stock
 IF NOT EXISTS (SELECT 1 FROM inventory_stock WHERE stock_id = 'stk-seed-wheat')
@@ -373,9 +373,9 @@ IF NOT EXISTS (SELECT 1 FROM inventory_stock WHERE stock_id = 'stk-pest-curacron
 IF NOT EXISTS (SELECT 1 FROM inventory_stock WHERE stock_id = 'stk-pest-match')
     INSERT INTO inventory_stock VALUES ('stk-pest-match','pest-match',110,GETDATE());
 
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 -- SEASONAL RULES (Rabi: Oct-Mar, Kharif: Apr-Sep)
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 IF NOT EXISTS (SELECT 1 FROM seasonal_rule WHERE rule_id = 'rule-wheat')
     INSERT INTO seasonal_rule VALUES ('rule-wheat','crop-wheat',10,3,1);
 IF NOT EXISTS (SELECT 1 FROM seasonal_rule WHERE rule_id = 'rule-barley')
@@ -397,9 +397,9 @@ IF NOT EXISTS (SELECT 1 FROM seasonal_rule WHERE rule_id = 'rule-sugarcane')
 IF NOT EXISTS (SELECT 1 FROM seasonal_rule WHERE rule_id = 'rule-bajra')
     INSERT INTO seasonal_rule VALUES ('rule-bajra','crop-bajra',4,9,1);
 
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 -- ALLOCATION LIMITS (per item type per season)
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 IF NOT EXISTS (SELECT 1 FROM allocation_limit WHERE limit_id = 'lim-seed-wheat')
     INSERT INTO allocation_limit VALUES ('lim-seed-wheat','seed-wheat','RABI',50,1);
 IF NOT EXISTS (SELECT 1 FROM allocation_limit WHERE limit_id = 'lim-seed-rice')
@@ -411,9 +411,9 @@ IF NOT EXISTS (SELECT 1 FROM allocation_limit WHERE limit_id = 'lim-fert-dap')
 IF NOT EXISTS (SELECT 1 FROM allocation_limit WHERE limit_id = 'lim-pest-confidor')
     INSERT INTO allocation_limit VALUES ('lim-pest-confidor','pest-confidor','KHARIF',10,1);
 
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 -- STOCK THRESHOLDS
--- ═══════════════════════════════════════════════════════════════
+-- ============================================================
 IF NOT EXISTS (SELECT 1 FROM stock_threshold WHERE threshold_id = 'thr-fert-urea')
     INSERT INTO stock_threshold VALUES ('thr-fert-urea','fert-urea',100);
 IF NOT EXISTS (SELECT 1 FROM stock_threshold WHERE threshold_id = 'thr-fert-dap')

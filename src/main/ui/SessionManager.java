@@ -1,7 +1,7 @@
 package ui;
 
 /**
- * NFR-2: Security â€” Session Manager Singleton.
+ * NFR-2: Security - Session Manager Singleton.
  * Tracks the currently logged-in user for role-based access control (RBAC).
  */
 public class SessionManager {
@@ -16,7 +16,7 @@ public class SessionManager {
 
     private SessionManager() {}
 
-    /** GoF Singleton â€” thread-safe lazy init. */
+    /** GoF Singleton - thread-safe lazy init. */
     public static synchronized SessionManager getInstance() {
         if (instance == null) {
             instance = new SessionManager();
@@ -46,7 +46,7 @@ public class SessionManager {
         return currentUserId != null;
     }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getCurrentUserId() { return currentUserId; }
     public String getCurrentUsername() { return currentUsername; }

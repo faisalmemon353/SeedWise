@@ -39,7 +39,7 @@ public class CropItemMapping {
     private static final Map<String, String> CROP_SEASON = new LinkedHashMap<>();
 
     static {
-        // ─── RABI CROPS ───────────────────────────────────────────────
+        // --- RABI CROPS ---
 
         // 1. Wheat
         CROP_SEASON.put("crop-wheat", "Rabi");
@@ -114,7 +114,7 @@ public class CropItemMapping {
         ));
         MAPPING.put("crop-peas", peas);
 
-        // ─── KHARIF CROPS ─────────────────────────────────────────────
+        // --- KHARIF CROPS ---
 
         // 6. Rice
         CROP_SEASON.put("crop-rice", "Kharif");

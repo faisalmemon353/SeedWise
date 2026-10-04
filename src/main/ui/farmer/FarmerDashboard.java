@@ -15,7 +15,7 @@ import java.util.List;
 import ui.components.CustomAlert;
 
 /**
- * Farmer Dashboard â€” sidebar navigation with UC-01 (profile), UC-02 (submit
+ * Farmer Dashboard - sidebar navigation with UC-01 (profile), UC-02 (submit
  * request), view requests.
  */
 public class FarmerDashboard {
@@ -31,7 +31,7 @@ public class FarmerDashboard {
         mainLayout = new BorderPane();
         mainLayout.setStyle("-fx-background-color: transparent;");
 
-        // --- Top Navigation (Consistent with Officer/Distributor)
+        // --- Top Navigation (Consistent with Officer/Distributor) ---
         HBox topNav = new HBox(15);
         topNav.setPadding(new Insets(12, 30, 12, 30));
         topNav.setStyle("-fx-background-color: rgba(45, 80, 22, 0.95); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);");
@@ -108,8 +108,7 @@ public class FarmerDashboard {
         b.setStyle("-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 8 12; -fx-cursor: hand; -fx-background-radius: 6;");
     }
 
-    // â”€â”€â”€ Overview Panel
-    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Overview Panel ---
     private void showOverview() {
         VBox content = new VBox(25);
         content.setPadding(new Insets(40));
@@ -178,7 +177,7 @@ public class FarmerDashboard {
             subtitleLbl.setStyle("-fx-font-size: 11px; -fx-text-fill: #A5D6A7;");
 
             VBox tips = new VBox(5);
-            Label tipTitle = new Label("💡 Planting Tip");
+            Label tipTitle = new Label("[Tip] Planting Tip");
             tipTitle.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #A5D6A7;");
             
             // Dynamic Tip based on current month
@@ -359,10 +358,8 @@ public class FarmerDashboard {
         g.add(kl, 0, r); g.add(vl, 1, r);
     }
 
-    // â”€â”€â”€ UC-02: Submit Request Panel
-    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    // --- UC-02: Submit Request Panel
-    // -----------------------------
+    // --- UC-02: Submit Request Panel ---
+    // --- UC-02: Submit Request Panel ---
     // --- UC-02: Submit Request Panel (Multi-step wizard) ---
     private int currentStep = 1;
     private String selectedSeason = "";
@@ -697,9 +694,8 @@ public class FarmerDashboard {
     }
 
 
-    // â”€â”€â”€ My Requests Panel
-    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    // ─── My Requests Panel (Modern Card List) ───────────────────────
+    // --- My Requests Panel ---
+    // --- My Requests Panel (Modern Card List) ---
     private String currentFilter = "ALL";
 
     private void showMyRequests() {
@@ -815,8 +811,7 @@ public class FarmerDashboard {
 
 
 
-    // â”€â”€â”€ UI Helpers
-    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- UI Helpers ---
 
 
 

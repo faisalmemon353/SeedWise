@@ -2,7 +2,7 @@ package business.model;
 
 /**
  * Domain model for Agriculture Officer entity.
- * OOP: Inheritance â€” extends UserAccount for common login/role logic.
+ * OOP: Inheritance - extends UserAccount for common login/role logic.
  */
 public class AgricultureOfficer extends UserAccount {
     private String officerId;

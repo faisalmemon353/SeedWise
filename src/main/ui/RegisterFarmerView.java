@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import ui.components.CustomAlert;
 
 /**
- * UC-01 – Register Farmer View.
+ * UC-01 - Register Farmer View.
  * Fields: Full Name, CNIC, Contact, Address, Username, Password, Confirm Password.
  */
 public class RegisterFarmerView {
@@ -18,11 +18,11 @@ public class RegisterFarmerView {
 
     public RegisterFarmerView(Stage stage) {
 
-        // ═══ Shared background layer ══════════════════════════
+        // --- Shared background layer ---
         StackPane root = new StackPane();
         ui.components.ImageBackground.applyTo(root);
 
-        // ═══ Registration card (glassmorphism) ══════════════════════
+        // --- Registration card (glassmorphism) ---
         VBox card = new VBox(12);
         card.setAlignment(Pos.CENTER);
         card.setMaxWidth(470);
@@ -78,12 +78,12 @@ public class RegisterFarmerView {
         card.getChildren().addAll(title, nameField, cnicField, contactField, addressField,
                                   usernameField, passwordField, confirmField, registerBtn, backLink);
 
-        // ═══ Center the card in the viewport ════════════════════════
+        // --- Center the card in the viewport ---
         StackPane centerWrapper = new StackPane(card);
         centerWrapper.setAlignment(Pos.CENTER);
         root.getChildren().add(centerWrapper);
 
-        // ═══ Event handlers ═════════════════════════════════════════
+        // --- Event handlers ---
 
         registerBtn.setOnAction(e -> {
             String name = nameField.getText().trim();

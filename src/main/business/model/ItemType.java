@@ -21,7 +21,7 @@ public class ItemType {
         this.description = description;
     }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getItemTypeId() { return itemTypeId; }
     public void setItemTypeId(String itemTypeId) { this.itemTypeId = itemTypeId; }

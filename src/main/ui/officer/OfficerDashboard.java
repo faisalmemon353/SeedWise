@@ -164,7 +164,7 @@ public class OfficerDashboard {
             SubsidyRequestDAO dao = new SubsidyRequestDAO();
             List<SubsidyRequest> allRequests = dao.searchByFilters(null, null, null, "ALL", null);
 
-            // ==================== PIE CHART ====================
+            // --- PIE CHART ---
             Label pieTitle = new Label("Request Status Breakdown");
             pieTitle.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;");
 
@@ -232,7 +232,7 @@ public class OfficerDashboard {
             pieCard.setPadding(new Insets(15));
             pieCard.setStyle("-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 5);");
 
-            // ==================== BAR CHART ====================
+            // --- BAR CHART ---
             Label barTitle = new Label("Subsidy Demand by Crop");
             barTitle.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;");
 

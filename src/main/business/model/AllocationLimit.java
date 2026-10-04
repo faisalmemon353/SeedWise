@@ -26,7 +26,7 @@ public class AllocationLimit {
         this.isActive = isActive;
     }
 
-    // ─── Getters and Setters ──────────────────────────────────────────
+    // --- Getters and Setters ---
 
     public String getLimitId() { return limitId; }
     public void setLimitId(String limitId) { this.limitId = limitId; }

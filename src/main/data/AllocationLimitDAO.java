@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Data Access Object for AllocationLimit entity.
- * GRASP: Low Coupling â€” UI and BL never touch SQL directly.
+ * GRASP: Low Coupling - UI and BL never touch SQL directly.
  */
 public class AllocationLimitDAO {
 

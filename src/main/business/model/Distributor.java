@@ -2,7 +2,7 @@ package business.model;
 
 /**
  * Domain model for Distributor entity.
- * OOP: Inheritance â€” extends UserAccount for common login/role logic.
+ * OOP: Inheritance - extends UserAccount for common login/role logic.
  */
 public class Distributor extends UserAccount {
     private String distributorId;
@@ -11,7 +11,7 @@ public class Distributor extends UserAccount {
     private String cnic;
     private String address;
 
-    // â”€â”€â”€ Constructors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Constructors ---
 
     /** Default constructor. */
     public Distributor() { super(); }
@@ -27,7 +27,7 @@ public class Distributor extends UserAccount {
         this.address = address;
     }
 
-    // â”€â”€â”€ Getters and Setters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // --- Getters and Setters ---
 
     public String getDistributorId() { return distributorId; }
     public void setDistributorId(String distributorId) { this.distributorId = distributorId; }
