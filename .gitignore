@@ -1,0 +1,21 @@
+# Compiled Java classes and build output
+out/
+bin/
+*.class
+
+# Generated reports / output files
+reportdistributor/*.pdf
+reportofficer/*.pdf
+
+# IDE cache / temporary files
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.log
+
+# OS-specific files
+Thumbs.db
+Desktop.ini
+.DS_Store

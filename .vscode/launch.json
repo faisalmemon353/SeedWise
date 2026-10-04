@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "java",
+            "name": "SeedWise App",
+            "request": "launch",
+            "mainClass": "ui.MainApp",
+            "vmArgs": "-Djava.library.path=lib --module-path lib --add-modules javafx.controls,javafx.media"
+        }
+    ]
+}

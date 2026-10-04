@@ -1,0 +1,235 @@
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL
+   ═══════════════════════════════════════════════════════════════ */
+
+.root {
+    -fx-font-family: "Segoe UI", "Arial";
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════════════════════════ */
+
+.primary-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-background-radius: 4;
+}
+
+.primary-button:hover {
+    -fx-background-color: #388E3C;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FORM CONTROLS
+   ═══════════════════════════════════════════════════════════════ */
+
+.text-field,
+.password-field,
+.combo-box {
+    -fx-padding: 8;
+    -fx-background-radius: 6;
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 6;
+    -fx-border-width: 1;
+    -fx-text-fill: #1a1a1a;
+    -fx-prompt-text-fill: #757575;
+}
+
+.text-field:focused,
+.combo-box:focused {
+    -fx-border-color: #3B6D11;
+    -fx-border-width: 1.5;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   TABLE → TEXT ONLY MODE (NO TABLE UI)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Main table */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* REMOVE HEADER COMPLETELY */
+.table-view .column-header-background {
+    -fx-max-height: 0;
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-opacity: 0;
+}
+
+/* REMOVE ALL INTERNAL BACKGROUNDS */
+.table-view .virtual-flow,
+.table-view .clipped-container,
+.table-view .sheet,
+.table-view .viewport,
+.table-view .scroll-pane,
+.table-view .scroll-pane .viewport,
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+/* ROWS → invisible */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* REMOVE hover + selection background */
+.table-row-cell:hover,
+.table-row-cell:selected {
+    -fx-background-color: transparent;
+}
+
+/* CELLS → TEXT ONLY */
+.table-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #111111;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+/* Keep text readable in all states */
+.table-row-cell .table-cell {
+    -fx-text-fill: #111111;
+}
+
+.table-row-cell:hover .table-cell {
+    -fx-text-fill: #000000;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #111111;
+    -fx-font-weight: bold;
+}
+
+/* REMOVE EMPTY ROW ARTIFACTS */
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+
+/* SCROLLBAR: completely hidden but scrollable */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    -fx-background-color: transparent;
+    -fx-opacity: 0;
+}
+.scroll-bar .thumb,
+.scroll-bar .track,
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button,
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Hide scroll pane corner diamond */
+.scroll-pane .corner {
+    -fx-background-color: transparent;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   TEXT AREA (REPORT VIEW)
+   ═══════════════════════════════════════════════════════════════ */
+
+.text-area {
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-background-radius: 6;
+    -fx-padding: 10;
+    -fx-font-size: 13px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   LABELS
+   ═══════════════════════════════════════════════════════════════ */
+
+.label {
+    -fx-text-fill: #1A1A1A;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   CHARTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Chart Title */
+.chart-title {
+    -fx-text-fill: #222;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Chart Legend */
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 8;
+}
+.chart-legend-item {
+    -fx-text-fill: #333;
+    -fx-font-size: 12px;
+}
+
+/* Axis Labels & Ticks */
+.axis {
+    -fx-tick-label-fill: #444;
+}
+.axis-label {
+    -fx-text-fill: #444;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+.axis .tick-mark,
+.axis .minor-tick-mark {
+    -fx-stroke: #ddd;
+}
+
+/* Chart Plot Area */
+.chart-plot-background {
+    -fx-background-color: #FAFAFA;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #eee;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #eee;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+}
+
+/* Bar Chart Colors */
+.default-color0.chart-bar { -fx-bar-fill: #4CAF50; }
+.default-color1.chart-bar { -fx-bar-fill: #FF9800; }
+.default-color0.chart-legend-item-symbol { -fx-background-color: #4CAF50; }
+.default-color1.chart-legend-item-symbol { -fx-background-color: #FF9800; }
+
+/* Pie Chart Colors */
+.default-color0.chart-pie { -fx-pie-color: #4CAF50; }
+.default-color1.chart-pie { -fx-pie-color: #FF9800; }
+.default-color2.chart-pie { -fx-pie-color: #2196F3; }
+.chart-pie-label {
+    -fx-fill: #333;
+    -fx-font-size: 11px;
+}
